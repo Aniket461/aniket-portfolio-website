@@ -1,0 +1,24 @@
+
+.custom-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.custom-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    align-self: center;
+    margin: 1.5em;
+}
+.custom-description{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+}
+@media (max-width:801px){
+    .custom-description{
+        width: 70%;
+        margin-left: 15%;
+        text-align: center;
+    }   
+}

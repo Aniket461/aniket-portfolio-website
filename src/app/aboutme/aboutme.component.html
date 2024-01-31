@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="aboutme">
+    <div class="custom-image" style="width: 251px; height: 251px">
+      <img
+        src="../../assets/placeholder.jpg"
+        style="border-radius: 100%; height: 251px; width: 251px"
+      />
+    </div>
+    <p class="text-justify">
+      I am a passionate coder who loves to code probably every hour of the day.
+      Yeah with a cup of COFFEE next to me!! Just like every other passionate
+      coder or developer, coding gives me immense satisfaction and
+      relaxation.<br />
+      Apart from coding I am a sports geek, who loves to watch cricket and
+      football a lot. Being a proud believer of "Never Say Die Attitude", I am
+      fierce supporter of teams like Australia in Cricket and Real Madrid in
+      Football, which I believe are the perfect examples of the previous phrase.
+      Other then sports I spend my time reading or exploring new places.
+    </p>
+    <!-- <div class="details">
+        <div class="row"><span class="col"><i class="fa fa-globe" aria-hidden="true"></i> Kaiserslautern, Germany </span>
+        <span class="col"><i class="fa fa-envelope" aria-hidden="true"></i> surveaniket461@gmail.com</span>
+    </div>
+    <div class="row"><span class="col"><i class="fa fa-phone-square" aria-hidden="true"></i> +49 1234567890          </span>
+        <span class="col"><i class="fa fa-birthday-cake" aria-hidden="true"></i> 20th JUNE 1998          </span>
+    </div>
+    </div>-->
+  </div>
+
+  <div class="social-wrapper">
+    <h5 class="text-center">Find me on social platforms</h5>
+    <div class="social-icons">
+      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      <i class="fa fa-github" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="text-center">
+    <button
+      class="btn custom-btn aboutbtn + {{
+        this.workedu == 'work' ? 'activeworkedu' : ''
+      }}"
+      type="button"
+      (click)="this.toggleworkedu('work')"
+    >
+      Experience <i class="fa fa-briefcase" aria-hidden="true"></i>
+    </button>
+    <button
+      class="btn custom-btn aboutbtn + {{
+        this.workedu == 'education' ? 'activeworkedu' : ''
+      }}"
+      type="button"
+      (click)="this.toggleworkedu('education')"
+    >
+      Education <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div *ngIf="this.workedu == 'work'" class="work-experience">
+    <h5 class="text-2xl text-center py-2">Work Experiences</h5>
+
+    <div
+      *ngFor="let c of workexperiences"
+      class="workex"
+      style="margin-top: 5px"
+    >
+      <h6>FRAUNHOFER ITWM GMBH</h6>
+      <p>Dec 2022 - PRESENT</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas
+        numquam itaque molestias corporis quibusdam cum delectus excepturi nulla
+        harum, tenetur non sequi necessitatibus enim architecto saepe molestiae
+        provident aliquam.
+      </p>
+    </div>
+  </div>
+  <div *ngIf="this.workedu == 'education'" class="education">
+    <h5 class="text-2xl text-center py-2">My Education</h5>
+    <div
+      *ngFor="let c of workexperiences"
+      class="workex"
+      style="margin-top: 5px"
+    >
+      <h6>TU Kaiserslautern / MSC. Computer Science</h6>
+      <p>October 2022 - PRESENT</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas
+        numquam itaque molestias corporis quibusdam cum delectus excepturi nulla
+        harum, tenetur non sequi necessitatibus enim architecto saepe molestiae
+        provident aliquam.
+      </p>
+    </div>
+  </div>
+</div>

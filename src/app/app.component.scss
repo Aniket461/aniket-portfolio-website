@@ -1,0 +1,61 @@
+.menu {
+  width: 100%;
+  font-size: 2.5em;
+  padding: 3px;
+  position: fixed;
+  z-index: 1000;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.menu-ul li {
+  color: black;
+  width: 150px;
+  padding: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #2facbc;
+}
+
+.menu-ul li:hover {
+  font-weight: 500;
+}
+
+.menu-ul li i {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.menu-ul {
+  font-size: 15px;
+  background-color: transparent;
+  padding: 0px;
+  text-decoration: none;
+  width: fit-content;
+}
+.menu-ul a {
+  text-decoration: none;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+@media (max-width: 801px) {
+  .menu-ul {
+    width: 100%;
+    background-color: #bdeaf0;
+  }
+  .menu .menubar {
+    padding-left: 20px;
+  }
+  .menu {
+    z-index: 0;
+    background-color: #bdeaf0;
+    padding: 0px;
+  }
+  .wrap {
+    padding-top: 50px;
+  }
+}
