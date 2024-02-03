@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+interface workex_edu {
+  title: '';
+  duration: '';
+  description: '';
+}
+
 @Component({
   selector: 'app-aboutme',
   templateUrl: './aboutme.component.html',
@@ -8,12 +14,9 @@ import { Component, OnInit } from '@angular/core';
 export class AboutmeComponent implements OnInit {
   constructor() {}
 
-  workexperiences = [
-    '../../assets/placeholder.jpg',
-    '../../assets/placeholder.jpg',
-    '../../assets/placeholder.jpg',
-    '../../assets/placeholder.jpg',
-  ];
+  workex: workex_edu[] = [{ title: '', duration: '', description: '' }];
+  education: workex_edu[] = [{ title: '', duration: '', description: '' }];
+
 
   workedu = 'work';
 

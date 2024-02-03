@@ -1,17 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 
+interface projects {
+  name: '';
+  description: '';
+  techstack: '';
+  gitlink: '';
+  visitlink: '';
+  imagelink:""
+}
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  mainprojects: projects[] = [
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
+  ];
 
-  projects = [1,2];
+  gameprojects: projects[] = [
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
+  ];
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

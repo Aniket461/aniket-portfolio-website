@@ -4,8 +4,7 @@
     flex-direction: column;
 }
 .custom-image{
-    width: 200px;
-    height: 200px;
+    width: 300px;
     border-radius: 100%;
     align-self: center;
     margin: 1.5em;
@@ -20,5 +19,8 @@
         width: 70%;
         margin-left: 15%;
         text-align: center;
-    }   
+    }  
+    .custom-image{
+        width: 200px;
+    } 
 }
