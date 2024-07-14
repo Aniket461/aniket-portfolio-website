@@ -35,9 +35,9 @@
   <div class="social-wrapper">
     <h5 class="text-center">Find me on social platforms</h5>
     <div class="social-icons">
-      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-      <i class="fa fa-github" aria-hidden="true"></i>
-      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <a href="https://www.linkedin.com/in/aniket-surve-3a8b5512b/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/Aniket461"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/aniketsurve__58/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="text-center">
@@ -67,16 +67,13 @@
     <div
       *ngFor="let c of workex"
       class="workex"
-      style="margin-top: 5px"
+      style="margin-top: 30px"
     >
-      <h6>FRAUNHOFER ITWM GMBH</h6>
-      <p>Dec 2022 - PRESENT</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas
-        numquam itaque molestias corporis quibusdam cum delectus excepturi nulla
-        harum, tenetur non sequi necessitatibus enim architecto saepe molestiae
-        provident aliquam.
-      </p>
+    <h6>{{c.role}}</h6>
+      <h6>{{c.companyname}}<span>{{"("+c.duration + ")"}}</span></h6>
+      <ul style="list-style-type: circle;">
+        <li *ngFor="let desc of c.description.split('• ')" ><p style="margin-bottom: 2px;">{{desc}}</p></li>
+      </ul>
     </div>
   </div>
   <div *ngIf="this.workedu == 'education'" class="education">
@@ -86,14 +83,9 @@
       class="workex"
       style="margin-top: 5px"
     >
-      <h6>TU Kaiserslautern / MSC. Computer Science</h6>
-      <p>October 2022 - PRESENT</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas
-        numquam itaque molestias corporis quibusdam cum delectus excepturi nulla
-        harum, tenetur non sequi necessitatibus enim architecto saepe molestiae
-        provident aliquam.
-      </p>
+      <h6>{{c.title}}</h6>
+      <p style="margin-bottom: 0px;">{{c.degree}}</p>
+      <p>{{c.duration}}</p>
     </div>
   </div>
 </div>

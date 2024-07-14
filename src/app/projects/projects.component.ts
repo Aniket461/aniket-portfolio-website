@@ -26,9 +26,41 @@ export class ProjectsComponent implements OnInit {
       visitlink: '',
       imagelink:''
     },
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
   ];
 
   gameprojects: projects[] = [
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
+    {
+      name: '',
+      description: '',
+      techstack: '',
+      gitlink: '',
+      visitlink: '',
+      imagelink:''
+    },
     {
       name: '',
       description: '',

@@ -13,7 +13,7 @@
   width: 150px;
   padding: 5px;
   padding-left: 10px;
-  border-left: 2px solid #2facbc;
+  border-left: 2px solid #7091E6;
 }
 
 .menu-ul li:hover {
@@ -45,14 +45,14 @@
 @media (max-width: 801px) {
   .menu-ul {
     width: 100%;
-    background-color: #bdeaf0;
+    background-color: #cdd5f1;
   }
   .menu .menubar {
     padding-left: 20px;
   }
   .menu {
     z-index: 0;
-    background-color: #bdeaf0;
+    background-color:#cdd5f1;
     padding: 0px;
   }
   .wrap {
