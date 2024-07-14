@@ -1,27 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  constructor(public http: HttpClient, public snackbar: MatSnackBar) {}
 
-  constructor( public http:HttpClient) { }
+  formObject = {
+    name: '',
+    email: '',
+    contactNo: '',
+    message: '',
+  };
 
-   formObject = {
-    name:'',
-    email:'',
-    contactNo:'',
-    message:'',
-  }
-
-  submitContactForm(){
-
-
-    let url = 'https://script.google.com/macros/s/AKfycbxLi1asGz7vspPkN9T2W5U657D_WB_JcP8Sy5x6_Kc3UW5OVTsvcO_bvYDg0mCNzBLu/exec';
-
+  submitContactForm() {
+    let url =
+      'https://script.google.com/macros/s/AKfycbw0yjrLGM2tWZzkJtnx9sPFqAFPV3SXA0iD3Q04bl5jXzmDAcwWvuLmh1mdjJdJqEVR/exec';
 
     console.log(this.formObject);
     let bodyString = `
@@ -31,21 +29,27 @@ export class ContactComponent implements OnInit {
     <span><b>contact no:</b> ${this.formObject.contactNo}</span>
     <span><b>Message:</b> ${this.formObject.message}</span>
     </div>
-    `
+    `;
 
-
-    this.http.post(url,JSON.stringify(this.formObject)).subscribe((e)=>{
-      console.log(e);
-    })
-
-
-    // let link = "mailto:surveaniket461@gmail.com" + "&subject=" + escape("Contact Form from PortFolio Website") + "&body=" + escape(bodyString);
-    // let el =  document.createElement('a');
-    // el.setAttribute('href',link);
-    // el.click();
+    this.http.post(url, JSON.stringify(this.formObject)).subscribe((e: any) => {
+      if (e.message) {
+        this.snackbar
+          .open(
+            'Thank you for reaching out, I will rever as soon as possible!!',
+            'Dismiss',
+            {
+              duration: 2000,
+              verticalPosition: 'top',
+              horizontalPosition: 'center',
+            }
+          )
+          .afterDismissed()
+          .subscribe((e) => {
+            window.location.href = '/contact';
+          });
+      }
+    });
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
